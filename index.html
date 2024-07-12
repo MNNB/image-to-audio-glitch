@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image to Audio Glitch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Image to Audio Glitch Generator</h1>
+  <div>
+    <input type="file" id="imageInput" accept="image/*">
+  </div>
+  <div>
+    <canvas id="imageCanvas"></canvas>
+  </div>
+  <div>
+    <button id="generateBtn">Generate Audio</button>
+    <button id="playBtn">Play</button>
+    <button id="stopBtn">Stop</button>
+    <button id="exportBtn">Export WAV</button>
+  </div>
+  <div>
+    <label for="sampleRate">Sample Rate:</label>
+    <input type="number" id="sampleRate" value="44100" min="8000" max="96000">
+  </div>
+  <div>
+    <label for="glitchIntensity">Glitch Intensity:</label>
+    <input type="range" id="glitchIntensity" min="0" max="100" value="50">
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
